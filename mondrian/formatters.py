@@ -20,6 +20,7 @@ class _Style(logging.PercentStyle):
 
         sep = "|" if iswindows else (Style.RESET_ALL + lightblack(":"))
         self._fmt = sep.join(tokens) + lightblack(":") + " %(message)s" + EOL.strip()
+        self._defaults = None
 
 
 def format_exception(excinfo, *, prefix="", fg=lightblack, bg=lightblack_bg, summary=True):
